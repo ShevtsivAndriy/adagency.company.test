@@ -176,9 +176,9 @@ class SimpleQueryBuilder implements SimpleQueryBuilderInterface
                     }
                     elseif ($from instanceof SimpleQueryBuilderInterface)
                     {
-                        $query .= " (" . $from->build() . ")";
+                        $query .= "(" . $from->build() . ")";
                     }
-                    $query .= (next($from) === false) ? '' : ', ';
+                    $query .= (next($this->fromTables) === false) ? '' : ', ';
                 }
             }
         }
@@ -194,10 +194,6 @@ class SimpleQueryBuilder implements SimpleQueryBuilderInterface
         {
             $where = (is_array($this->where)) ? implode(', ', $this->where) : $this->where;
             $query .= " WHERE " . $where;
-        }
-        else
-        {
-            throw new \LogicException('Empty WHERE part');
         }
 
         /**
