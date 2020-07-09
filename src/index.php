@@ -1,6 +1,8 @@
 <?php
 
-require 'SimpleQueryBuilder.php';
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use \Andriy\SimpleQueryBuilder;
 
 $queryBuilder = new SimpleQueryBuilder();
 echo $queryBuilder->select(['id', 'email', 'password'])

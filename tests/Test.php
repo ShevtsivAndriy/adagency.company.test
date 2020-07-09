@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-require 'src/SimpleQueryBuilder.php';
+use Andriy\SimpleQueryBuilder;
 
 class Test extends TestCase
 {

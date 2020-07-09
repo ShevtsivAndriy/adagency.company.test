@@ -1,7 +1,9 @@
 <?php
 declare(strict_types=1);
 
-require 'SimpleQueryBuilderInterface.php';
+namespace Andriy;
+
+use Andriy\MyInterface\SimpleQueryBuilderInterface;
 
 /**
  * Class SimpleQueryBuilder
